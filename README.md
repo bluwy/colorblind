@@ -1,5 +1,8 @@
 # Colorblind
 
+[![NPM badge](https://img.shields.io/npm/v/@bjornlu/colorblind)](https://www.npmjs.com/package/@bjornlu/colorblind)
+[![jsDelivr badge](https://data.jsdelivr.com/v1/package/npm/@bjornlu/colorblind/badge)](https://www.jsdelivr.com/package/npm/@bjornlu/colorblind)
+
 A zero-dependencies color blindness simulation library.
 
 It is based on the [color blindness simulation research](https://ixora.io/projects/colorblindness/color-blindness-simulation-research/) and its [Processing library](https://github.com/hx2A/ColorBlindness) by [hx2A](https://github.com/hx2A).
@@ -11,6 +14,14 @@ It is based on the [color blindness simulation research](https://ixora.io/projec
 ```bash
 $ npm install @bjornlu/colorblind
 ```
+
+or use jsDelivr CDN for direct browser usage:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@bjornlu/colorblind@1.0.0/dist/index.umd.min.js"></script>
+```
+
+The CDN version sets a global `colorblind` object which holds the functions below, e.g. `colorblind.simulate(rgb, deficiency)`.
 
 ## Usage
 
