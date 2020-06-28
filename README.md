@@ -22,7 +22,7 @@ Simulates a color with applied color blindness deficiency.
 
 `rgb` is an object with keys `r`, `g` and `b` with values between 0 and 255.
 
-`deficiency` can be one of `protanopia`, `deuteranopia`, `tritanopsia` or `achromatopsia`.
+`deficiency` can be one of `protanopia`, `deuteranopia`, `tritanopia` or `achromatopsia`.
 
 Example:
 

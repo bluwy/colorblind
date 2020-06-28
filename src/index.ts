@@ -19,7 +19,7 @@ import {
 export type Deficiency =
   | 'protanopia'
   | 'deuteranopia'
-  | 'tritanopsia'
+  | 'tritanopia'
   | 'achromatopsia'
 
 export function simulate(rgb: RGB, deficiency: Deficiency) {
@@ -28,7 +28,7 @@ export function simulate(rgb: RGB, deficiency: Deficiency) {
       return simulateDichromatic(rgb, protanopiaSim)
     case 'deuteranopia':
       return simulateDichromatic(rgb, deuteranopiaSim)
-    case 'tritanopsia':
+    case 'tritanopia':
       return simulateDichromatic(rgb, tritanopiaSim)
     case 'achromatopsia':
       return simulateMonochromatic(rgb, achromatopsiaSim)
