@@ -32,8 +32,10 @@
     "achromatopsia"
   ],
   "scripts": {
+    "clean": "rm -rf dist",
     "build": "rollup -c",
-    "format": "prettier --write \"**/*.{ts,md,html,css,js}\""
+    "format": "prettier --write \"**/*.{ts,md,html,css,js}\"",
+    "prepublishOnly": "yarn clean && yarn build"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^5.0.0",

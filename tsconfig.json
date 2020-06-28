@@ -2,7 +2,6 @@
   "compilerOptions": {
     "rootDir": "src",
     "target": "ES2015",
-    "module": "ES2015",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
