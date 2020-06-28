@@ -15,7 +15,7 @@ export default [
   {
     input: 'src/index.ts',
     output: {
-      name: pkg.name,
+      name: 'colorblind',
       format: 'umd',
       dir: './',
       entryFileNames: pkg.browser,

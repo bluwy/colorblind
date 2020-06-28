@@ -9,7 +9,7 @@ It is based on the [color blindness simulation research](https://ixora.io/projec
 ## Install
 
 ```bash
-$ npm install colorblind
+$ npm install @bjornlu/colorblind
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ Simulates a color with applied color blindness deficiency.
 Example:
 
 ```js
-import { simulate } from 'colorblind'
+import { simulate } from '@bjornlu/colorblind'
 
 simulate({ r: 120, g: 50, b: 30 }, 'protanopia')
 // => { r: 61.93899039184746, g: 61.93898965670619, b: 29.683799575796723 }
