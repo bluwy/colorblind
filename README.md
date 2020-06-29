@@ -67,7 +67,7 @@ PRs are welcomed for any typos or documentation issues. Edits on the simulation 
 
 The library was actually planned to be a rewrite of [color-blind](https://github.com/skratchdot/color-blind) to remove the [onecolor](https://github.com/One-com/one-color) dependency and to add typings. In the process of understanding how the code works, I found that the [original reference](https://galactic.ink/sphere/js/Color.Blind.js) was outdated and has a [newer version](https://galactic.ink/labs/Color-Vision/Javascript/Color.Vision.Simulate.js).
 
-I also found out about the LMS version of the daltonize implementation, which happens to be the same technique used in the [color blindness simulation research](https://ixora.io/projects/colorblindness/color-blindness-simulation-research/). The only difference was the simulation matrix used for the color deficiencies and its post color correction calculations.
+I also found out about the [LMS version](https://galactic.ink/labs/Color-Vision/Javascript/Color.Vision.Daltonize.js) of the daltonize implementation, which happens to be the same technique used in the [color blindness simulation research](https://ixora.io/projects/colorblindness/color-blindness-simulation-research/). The only difference was the simulation matrix used for the color deficiencies and its post color correction calculations.
 
 I finally decided to follow the algorithm from the research since it's the only source I found that backs up how the values were calculated. So this means that this library does not use daltonization to calculate the colors.
 
