@@ -2,9 +2,9 @@
   "name": "@bjornlu/colorblind",
   "description": "Simulate color blindness",
   "version": "1.0.0",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "browser": "dist/index.umd.js",
+  "main": "dist/colorblind.cjs.js",
+  "module": "dist/colorblind.esm.js",
+  "browser": "dist/colorblind.min.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
