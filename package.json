@@ -14,13 +14,13 @@
     "url": "https://bjornlu.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/BjornLuG/colorblind",
+  "homepage": "https://github.com/bluwy/colorblind",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BjornLuG/colorblind.git"
+    "url": "https://github.com/bluwy/colorblind.git"
   },
   "bugs": {
-    "url": "https://github.com/BjornLuG/colorblind/issues"
+    "url": "https://github.com/bluwy/colorblind/issues"
   },
   "keywords": [
     "color",

@@ -7,7 +7,7 @@ A zero-dependencies color blindness simulation library.
 
 It is based on the [color blindness simulation research](https://ixora.io/projects/colorblindness/color-blindness-simulation-research/) and its [Processing library](https://github.com/hx2A/ColorBlindness) by [hx2A](https://github.com/hx2A).
 
-[Demo](https://bjornlug.github.io/colorblind)
+[Demo](https://bluwy.github.io/colorblind)
 
 ## Install
 
