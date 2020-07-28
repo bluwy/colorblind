@@ -1,7 +1,7 @@
 # Colorblind
 
-[![NPM badge](https://img.shields.io/npm/v/@bjornlu/colorblind)](https://www.npmjs.com/package/@bjornlu/colorblind)
-[![jsDelivr badge](https://data.jsdelivr.com/v1/package/npm/@bjornlu/colorblind/badge)](https://www.jsdelivr.com/package/npm/@bjornlu/colorblind)
+[![package version](https://img.shields.io/npm/v/@bjornlu/colorblind)](https://www.npmjs.com/package/@bjornlu/colorblind)
+[![npm downloads](https://img.shields.io/npm/dm/@bjornlu/colorblind)](https://www.npmjs.com/package/@bjornlu/colorblind)
 
 A zero-dependencies color blindness simulation library.
 
