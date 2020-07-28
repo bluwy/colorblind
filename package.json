@@ -1,7 +1,7 @@
 {
   "name": "@bjornlu/colorblind",
   "description": "Simulate color blindness",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/colorblind.cjs.js",
   "module": "dist/colorblind.esm.js",
   "browser": "dist/colorblind.min.js",

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2 - 2020-07-28
+
+### Fixed
+
+- Update NPM readme
+- Internal code refactoring
+
 ## 1.0.1 - 2020-07-02
 
 ### Changed

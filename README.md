@@ -18,7 +18,7 @@ $ npm install @bjornlu/colorblind
 or use jsDelivr CDN for direct browser usage:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@bjornlu/colorblind@1.0.1/dist/colorblind.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@bjornlu/colorblind@1.0.2/dist/colorblind.min.js"></script>
 ```
 
 The CDN version sets a global `colorblind` object which holds the functions below, e.g. `colorblind.simulate(rgb, deficiency)`.
