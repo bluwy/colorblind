@@ -33,7 +33,7 @@
   ],
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "rollup -c",
+    "build": "rollup -c && tsc",
     "format": "prettier --write \"**/*.{ts,md,html,css,js}\"",
     "prepublishOnly": "yarn clean && yarn build"
   },

@@ -1,7 +1,13 @@
-import path from 'path'
 import typescript from '@rollup/plugin-typescript'
 import { terser } from 'rollup-plugin-terser'
 import pkg from './package.json'
+import tsconfig from './tsconfig.json'
+
+const {
+  declaration,
+  declarationDir,
+  ...compilerOptions
+} = tsconfig.compilerOptions
 
 export default [
   {
@@ -9,21 +15,12 @@ export default [
     output: [
       { format: 'cjs', file: pkg.main },
       { format: 'es', file: pkg.module },
+      { format: 'umd', file: pkg.browser, name: 'colorblind' },
     ],
-    plugins: [typescript(), terser()],
-  },
-  {
-    input: 'src/index.ts',
-    output: {
-      name: 'colorblind',
-      format: 'umd',
-      dir: './',
-      entryFileNames: pkg.browser,
-    },
     plugins: [
       typescript({
-        declaration: true,
-        declarationDir: path.dirname(pkg.types),
+        tsconfig: false,
+        ...compilerOptions,
       }),
       terser(),
     ],
