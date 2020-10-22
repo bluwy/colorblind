@@ -35,7 +35,7 @@
     "clean": "rm -rf dist",
     "build": "rollup -c && tsc",
     "format": "prettier --write '**/*.{ts,md,html,css,js}'",
-    "prepublishOnly": "yarn clean && yarn build"
+    "prepublishOnly": "pnpm clean && pnpm build"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^6.0.0",
