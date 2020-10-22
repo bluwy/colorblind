@@ -7,7 +7,7 @@ A zero-dependencies color blindness simulation library.
 
 It is based on the [color blindness simulation research](https://ixora.io/projects/colorblindness/color-blindness-simulation-research/) and its [Processing library](https://github.com/hx2A/ColorBlindness) by [hx2A](https://github.com/hx2A).
 
-[Demo](https://bluwy.github.io/colorblind)
+[**Demo**](https://bluwy.github.io/colorblind)
 
 ## Install
 
@@ -15,42 +15,46 @@ It is based on the [color blindness simulation research](https://ixora.io/projec
 $ npm install @bjornlu/colorblind
 ```
 
-or use jsDelivr CDN for direct browser usage:
+or with CDN for direct browser usage, such as:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@bjornlu/colorblind@1.0.2/dist/colorblind.min.js"></script>
+<!-- jsDelivr -->
+<script src="https://cdn.jsdelivr.net/npm/@bjornlu/colorblind"></script>
+
+<!-- unpkg -->
+<script src="https://unpkg.com/@bjornlu/colorblind>"></script>
 ```
 
-The CDN version sets a global `colorblind` object which holds the functions below, e.g. `colorblind.simulate(rgb, deficiency)`.
+The CDN version sets a global `colorblind` object, e.g. `colorblind.simulate(...)`.
 
 ## Usage
-
-The library exports one main function:
-
-**`simulate(rgb: RGB, deficiency: Deficiency): RGB`**
-
-Simulates a color with applied color blindness deficiency.
-
-`rgb` is an object with keys `r`, `g` and `b` with values between 0 and 255.
-
-`deficiency` can be one of `protanopia`, `deuteranopia`, `tritanopia` or `achromatopsia`.
-
-Example:
 
 ```js
 import { simulate } from '@bjornlu/colorblind'
 
 simulate({ r: 120, g: 50, b: 30 }, 'protanopia')
-// => { r: 61.93899039184746, g: 61.93898965670619, b: 29.683799575796723 }
+// => { r: 62, g: 62, b: 30 }
 ```
 
-There's also two functions for extra customization:
+The color deficiency can be set to:
 
-**`simulateDichromatic(rgb: RGB, simMatrix: Array<number>): RGB`**
+| Deficiency        | Description |
+| ----------------- | ----------- |
+| `'protanopia'`    | No red      |
+| `'deuteranopia'`  | No green    |
+| `'tritanopia'`    | No blue     |
+| `'achromatopsia'` | No color    |
 
-**`simulateMonochromatic(rgb: RGB, simMatrix: Array<number>): RGB`**
+## Advanced
 
-`simulateDichromatic` accepts a simulation matrix represented as an array of 9 numbers, while `simulateMonochromatic` accepts array of 3 numbers.
+The library also exports two functions:
+
+1. `simulateDichromatic(rgb: RGB, simMatrix: Array<number>): RGB`
+2. `simulateMonochromatic(rgb: RGB, simMatrix: Array<number>): RGB`
+
+You would almost never used this unless you need to perform custom color simulation.
+
+`simulateDichromatic()` accepts a simulation matrix represented as an array of 9 numbers, while `simulateMonochromatic()` accepts array of 3 numbers.
 
 Check out the [research](https://ixora.io/projects/colorblindness/color-blindness-simulation-research/) for how to calculate simulation matrices.
 
