@@ -58,14 +58,14 @@ export function convertMatrixToLms(m: Array<number>): LMS {
   return { l: m[0], m: m[1], s: m[2] }
 }
 
-export function clampRgb(rgb: RGB): RGB {
+export function sanitizeRgb(rgb: RGB): RGB {
   return {
-    r: clamp(rgb.r, 0, 255),
-    g: clamp(rgb.g, 0, 255),
-    b: clamp(rgb.b, 0, 255),
+    r: sanitizeRgbProperty(rgb.r),
+    g: sanitizeRgbProperty(rgb.g),
+    b: sanitizeRgbProperty(rgb.b),
   }
 }
 
-function clamp(v: number, min: number, max: number) {
-  return Math.min(Math.max(v, min), max)
+function sanitizeRgbProperty(v: number) {
+  return Math.round(Math.min(Math.max(v, 0), 255))
 }
