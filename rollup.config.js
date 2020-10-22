@@ -9,20 +9,18 @@ const {
   ...compilerOptions
 } = tsconfig.compilerOptions
 
-export default [
-  {
-    input: 'src/index.ts',
-    output: [
-      { format: 'cjs', file: pkg.main },
-      { format: 'es', file: pkg.module },
-      { format: 'umd', file: pkg.browser, name: 'colorblind' },
-    ],
-    plugins: [
-      typescript({
-        tsconfig: false,
-        ...compilerOptions,
-      }),
-      terser(),
-    ],
-  },
-]
+export default {
+  input: 'src/index.ts',
+  output: [
+    { format: 'cjs', file: pkg.main },
+    { format: 'es', file: pkg.module },
+    { format: 'umd', file: pkg.browser, name: 'colorblind' },
+  ],
+  plugins: [
+    typescript({
+      tsconfig: false,
+      ...compilerOptions,
+    }),
+    terser(),
+  ],
+}

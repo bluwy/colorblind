@@ -6,14 +6,15 @@ import {
   achromatopsiaSim,
 } from './sim-matrix'
 import {
+  clampRgb,
   convertLmsToMatrix,
   convertLmsToRgb,
   convertMatrixToLms,
+  convertMatrixToRgb,
   convertRgbToLms,
   convertRgbToMatrix,
   multiplyMatrix3x1And3x1,
   multiplyMatrix3x3And3x1,
-  convertMatrixToRgb,
 } from './util'
 
 export type Deficiency =
@@ -38,20 +39,20 @@ export function simulate(rgb: RGB, deficiency: Deficiency) {
 }
 
 export function simulateDichromatic(rgb: RGB, simMatrix: Array<number>) {
-  const lms = convertRgbToLms(rgb)
+  const lms = convertRgbToLms(clampRgb(rgb))
   const lmsMatrix = convertLmsToMatrix(lms)
   const simLmsMatrix = multiplyMatrix3x3And3x1(simMatrix, lmsMatrix)
   const simLms = convertMatrixToLms(simLmsMatrix)
   const simRgb = convertLmsToRgb(simLms)
 
-  return simRgb
+  return clampRgb(simRgb)
 }
 
 export function simulateMonochromatic(rgb: RGB, simMatrix: Array<number>) {
-  const rgbMatrix = convertRgbToMatrix(rgb)
+  const rgbMatrix = convertRgbToMatrix(clampRgb(rgb))
   const simRgbValue = multiplyMatrix3x1And3x1(rgbMatrix, simMatrix)[0]
   const simRgbMetrix = Array(3).fill(simRgbValue)
   const simRgb = convertMatrixToRgb(simRgbMetrix)
 
-  return simRgb
+  return clampRgb(simRgb)
 }

@@ -57,3 +57,15 @@ export function convertMatrixToRgb(m: Array<number>): RGB {
 export function convertMatrixToLms(m: Array<number>): LMS {
   return { l: m[0], m: m[1], s: m[2] }
 }
+
+export function clampRgb(rgb: RGB): RGB {
+  return {
+    r: clamp(rgb.r, 0, 255),
+    g: clamp(rgb.g, 0, 255),
+    b: clamp(rgb.b, 0, 255),
+  }
+}
+
+function clamp(v: number, min: number, max: number) {
+  return Math.min(Math.max(v, min), max)
+}
